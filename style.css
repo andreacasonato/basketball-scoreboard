@@ -1,0 +1,203 @@
+@font-face {
+  font-family: "Cursed Timer";
+  src: url(CursedTimerUlil-Aznm.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Cursed Timer", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  border-radius: 4px;
+  border: 0.8px solid #7f7f7f;
+}
+
+.scoreboard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 50px;
+}
+
+/* ---------- HOME SECTION ---------- */
+
+.home-header {
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-score {
+  width: 274px;
+  height: 120px;
+  background-color: #fcfcfc;
+  border: 1px solid #939393;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.home-buttons button {
+  font-size: 1.4rem;
+  padding: 10px 14px;
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.home-fouls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.home-fouls span {
+  font-size: 1.5rem;
+}
+
+.home-fouls-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-fouls-container button {
+  font-size: 1.4rem;
+  padding: 10px 14px;
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.home-fouls-committed {
+  width: 56px;
+  height: 48px;
+  border: 1px solid #999;
+  background: #fff;
+}
+
+/* ---------- QUARTER / TIME SECTION ---------- */
+
+.quarter-time {
+  text-align: center;
+}
+
+.quarter-header {
+  font-size: 2rem;
+}
+
+.quarter-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.quarter-buttons button {
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.display-time {
+  width: 274px;
+  height: 120px;
+  background-color: #fcfcfc;
+  border: 1px solid #939393;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.time-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.time-buttons button {
+  padding: 16px 24px;
+  cursor: pointer;
+}
+
+/* ---------- AWAY SECTION ---------- */
+
+.away-header {
+  display: block;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.away-score {
+  width: 274px;
+  height: 120px;
+  background-color: #fcfcfc;
+  border: 1px solid #939393;
+}
+
+.away-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.away-buttons button {
+  font-size: 1.4rem;
+  padding: 10px 14px;
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.away-fouls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.away-fouls span {
+  font-size: 1.5rem;
+}
+
+.away-fouls-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.away-fouls-container button {
+  font-size: 1.4rem;
+  padding: 10px 14px;
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.away-fouls-committed {
+  width: 56px;
+  height: 48px;
+  border: 1px solid #999;
+  background: #fff;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+
+@media (max-width: 945px) {
+  .scoreboard-container {
+    flex-direction: column;
+  }
+}
