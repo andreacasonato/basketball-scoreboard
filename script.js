@@ -56,7 +56,7 @@ homePointsThree.addEventListener("click", () => {
 });
 */
 
-// DRY Function -- Home Team Score Buttons and Display
+// --- DRY Function -- Home/Away Team Score Buttons and Display ---
 function updateScore(displayElement, pointsToAdd) {
   const currentNumber = Number(displayElement.innerText);
   const newNumber = currentNumber + pointsToAdd;
@@ -73,13 +73,6 @@ homePointsThree.addEventListener("click", () =>
   updateScore(homePointsDisplay, 3)
 );
 
-// DRY Function -- Away Team Score Buttons and Display
-function updateScore(displayElement, pointsToAdd) {
-  const currentNumber = Number(displayElement.innerText);
-  const newNumber = currentNumber + pointsToAdd;
-  displayElement.innerText = newNumber;
-}
-
 awayPointsOne.addEventListener("click", () =>
   updateScore(awayPointsDisplay, 1)
 );
@@ -89,3 +82,31 @@ awayPointsTwo.addEventListener("click", () =>
 awayPointsThree.addEventListener("click", () =>
   updateScore(awayPointsDisplay, 3)
 );
+
+// --- Home Fouls ---
+homeFoulsOne.addEventListener("click", () => {
+  const currentFoulCount = Number(homeFoulsDisplay.innerText);
+
+  if (currentFoulCount < 5) {
+    homeFoulsDisplay.innerText = currentFoulCount + 1;
+  }
+});
+
+// --- Home Fouls Reset ---
+homeFoulsReset.addEventListener("click", () => {
+  homeFoulsDisplay.innerText = 0;
+});
+
+// --- Away Fouls ---
+awayFoulsOne.addEventListener("click", () => {
+  const currentFoulCount = Number(awayFoulsDisplay.innerText);
+
+  if (currentFoulCount < 5) {
+    awayFoulsDisplay.innerText = currentFoulCount + 1;
+  }
+});
+
+// --- Away Fouls Reset ---
+awayFoulsReset.addEventListener("click", () => {
+  awayFoulsDisplay.innerText = 0;
+});
