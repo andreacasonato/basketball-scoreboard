@@ -22,6 +22,16 @@ const awayFoulsReset = document.getElementById("away-fouls-reset");
 
 const quarterButtons = document.querySelectorAll(".quarter-buttons button");
 
+/* -------------------------- */
+
+const displayTime = document.querySelector(".display-time span");
+const startBtn = document.getElementById("start-button");
+const stopBtn = document.getElementById("stop-button");
+
+// Timer variables
+let timeRemaining = 600; // 10 minutes in seconds
+let timerInterval = null; // will store the interval ID
+
 /*
 
 // Home +1 point
@@ -124,3 +134,17 @@ quarterButtons.forEach((button) => {
     button.classList.add("active");
   });
 });
+
+// --- Timer ---
+function formatTime(totalSeconds) {
+  const minutes = Math.floor(totalSeconds / 60);
+  const seconds = totalSeconds % 60;
+
+  const formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+  const formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+
+  // Return as string like "10:00"
+  return `${formattedMinutes}:${formattedSeconds}`;
+}
+
+formatTime(600);
