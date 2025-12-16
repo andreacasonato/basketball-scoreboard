@@ -32,6 +32,8 @@ const stopBtn = document.getElementById("stop-button");
 let timeRemaining = 600; // 10 minutes in seconds
 let timerInterval = null; // will store the interval ID
 
+/* ========================== */
+
 /*
 
 // Home +1 point
@@ -148,3 +150,31 @@ function formatTime(totalSeconds) {
 }
 
 formatTime(600);
+
+function countdown() {
+  // decrease time by 1 sec
+  timeRemaining--;
+
+  // format time and display
+  displayTime.innerText = formatTime(timeRemaining);
+
+  // check if timer reached 0
+  if (timeRemaining <= 0) {
+    clearInterval(timerInterval);
+    timerInterval = null;
+    timeRemaining = 600;
+    displayTime.innerText = formatTime(600); // Shows "10:00" immediately
+  }
+}
+
+startBtn.addEventListener("click", () => {
+  // only start if timer isn't already running
+  if (timerInterval === null) {
+    timerInterval = setInterval(countdown, 1000);
+  }
+});
+
+stopBtn.addEventListener("click", () => {
+  clearInterval(timerInterval);
+  timerInterval = null;
+});
