@@ -230,3 +230,10 @@ button {
     flex-direction: column;
   }
 }
+
+/* ---------- QUARTER BUTTONS ---------- */
+.active {
+  background-color: #5bd54e;
+  color: #222;
+  border: 2px solid #353535;
+}

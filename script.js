@@ -20,6 +20,8 @@ const awayFoulsReset = document.getElementById("away-fouls-reset");
 
 /* -------------------------- */
 
+const quarterButtons = document.querySelectorAll(".quarter-buttons button");
+
 /*
 
 // Home +1 point
@@ -109,4 +111,16 @@ awayFoulsOne.addEventListener("click", () => {
 // --- Away Fouls Reset ---
 awayFoulsReset.addEventListener("click", () => {
   awayFoulsDisplay.innerText = 0;
+});
+
+// --- Quarter Selection ---
+quarterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // remove 'active' from all buttons
+    quarterButtons.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+    // add 'active' to clicked button
+    button.classList.add("active");
+  });
 });
