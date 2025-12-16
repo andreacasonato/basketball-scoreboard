@@ -1,7 +1,7 @@
 # Basketball Scoreboard Console
 
 ## Description
-A simple scoreboard console, thought for Basketball.
+A simple scoreboard console, thought for basketball.
 
 It features:
 - Timer (start/stop)
