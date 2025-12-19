@@ -1,6 +1,5 @@
 # Basketball Scoreboard Console
 
-## Description
 A simple scoreboard console, thought for basketball.
 
 It features:
@@ -9,7 +8,7 @@ It features:
 - Fouls counter
 - Quarter selection
 
-## Stretch Goals
+### Stretch Goals
 I'm planning for further improvements of this app's functionality, such as:
 - Reset timer button;
 - Overall Reset button: reset both teams' scores and fouls to 0;
